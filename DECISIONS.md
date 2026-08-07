@@ -1,6 +1,7 @@
 # Decisions
 
-- **Time actually spent:** _<fill in your real figure before sending>_
+- **Time actually spent:** ~1h10m, including about 20 minutes on the Windows
+  lock bug
 
 - **What changed between your roadmap and what you shipped:**
 

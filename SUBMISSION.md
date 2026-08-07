@@ -1,7 +1,7 @@
 # Submission
 
-- **Transcript (file or link):** _<path to your raw agent session, including
-  the parts that went nowhere>_
+- **Transcript (file or link):** `transcript/` — raw agent session, dead ends
+  included
 
 - **`make demo` output:** in full at the bottom of this file.
 
@@ -16,7 +16,7 @@
 - **`make test` output:** 37 tests, one class per guarantee.
 
   ```
-  Ran 37 tests in 0.433s
+  Ran 37 tests in 8.877s
   OK
   ```
 
