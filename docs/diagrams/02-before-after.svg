@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="880" viewBox="0 0 1320 880" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1320" height="880" fill="#ffffff"/>
+<text x="48" y="56" font-size="27" font-weight="bold" fill="#16191d">What the operator sees</text>
+<text x="48" y="82" font-size="14.5" fill="#6b7280">The same nine situations, before and after. Every line on both sides is real output from make demo, make test or make stress — not a description of them.</text>
+<line x1="48" y1="100" x2="1272" y2="100" stroke="#d8dbe0" stroke-width="1.5"/>
+<text x="48" y="128" font-size="12.5" font-weight="bold" fill="#6b7280" letter-spacing="1.5">SITUATION</text>
+<rect x="388" y="112" width="452" height="688" fill="#fdf7f6"/>
+<text x="404" y="128" font-size="12.5" font-weight="bold" fill="#b4443a" letter-spacing="1.5">STARTER</text>
+<text x="872" y="128" font-size="12.5" font-weight="bold" fill="#2f7a4f" letter-spacing="1.5">AFTER</text>
+<line x1="48" y1="136" x2="1272" y2="136" stroke="#c9ccd2" stroke-width="1.2"/>
+<text x="48" y="164" font-size="14" font-weight="bold" fill="#16191d">Crash mid-run, restart, recover</text>
+<g transform="translate(410,159)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="164" font-size="13.5" fill="#16191d">done  ·  verified: true  ·  4 drafts</text>
+<text x="426" y="184" font-size="12.5" font-style="italic" fill="#8a6f6b">the drafts were not what was approved</text>
+<g transform="translate(878,159)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="164" font-size="13.5" fill="#16191d">needs_review  ·  4 drafts</text>
+<text x="894" y="184" font-size="12.5" font-style="italic" fill="#6b8a76">3 names rewritten, 2 collide — named</text>
+<line x1="48" y1="208" x2="1272" y2="208" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="238" font-size="14" font-weight="bold" fill="#16191d">The same key submitted twice</text>
+<g transform="translate(410,233)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="238" font-size="13.5" fill="#16191d">8 drafts for 4 approved assets</text>
+<text x="426" y="258" font-size="12.5" font-style="italic" fill="#8a6f6b">a second deployment, silently</text>
+<g transform="translate(878,233)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="238" font-size="13.5" fill="#16191d">returns the deployment that exists</text>
+<text x="894" y="258" font-size="12.5" font-style="italic" fill="#6b8a76">4 drafts</text>
+<line x1="48" y1="282" x2="1272" y2="282" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="312" font-size="14" font-weight="bold" fill="#16191d">The same key, a different request</text>
+<g transform="translate(410,307)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="312" font-size="13.5" fill="#16191d">accepted  ·  two runs, two payloads</text>
+<text x="426" y="332" font-size="12.5" font-style="italic" fill="#8a6f6b">nobody noticed the key was reused</text>
+<g transform="translate(878,307)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="312" font-size="13.5" fill="#16191d">refused: IdempotencyConflict</text>
+<text x="894" y="332" font-size="12.5" font-style="italic" fill="#6b8a76">nothing written to the destination</text>
+<line x1="48" y1="356" x2="1272" y2="356" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="386" font-size="14" font-weight="bold" fill="#16191d">Admin panel retry of a stalled run</text>
+<g transform="translate(410,381)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="386" font-size="13.5" fill="#16191d">8 drafts  ·  stalled run reports done</text>
+<text x="426" y="406" font-size="12.5" font-style="italic" fill="#8a6f6b">retry minted a second deployment</text>
+<g transform="translate(878,381)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="386" font-size="13.5" fill="#16191d">re-arms the same deployment</text>
+<text x="894" y="406" font-size="12.5" font-style="italic" fill="#6b8a76">4 drafts</text>
+<line x1="48" y1="430" x2="1272" y2="430" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="460" font-size="14" font-weight="bold" fill="#16191d">Operator cancels mid-flight</text>
+<g transform="translate(410,455)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="460" font-size="13.5" fill="#16191d">status flips back to done  ·  4 written</text>
+<text x="426" y="480" font-size="12.5" font-style="italic" fill="#8a6f6b">the worker overwrote the cancel</text>
+<g transform="translate(878,455)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="460" font-size="13.5" fill="#16191d">stays cancelled</text>
+<text x="894" y="480" font-size="12.5" font-style="italic" fill="#6b8a76">reports the 1 draft already written</text>
+<line x1="48" y1="504" x2="1272" y2="504" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="534" font-size="14" font-weight="bold" fill="#16191d">What the receipt means</text>
+<g transform="translate(410,529)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="534" font-size="13.5" fill="#16191d">verified: true</text>
+<text x="426" y="554" font-size="12.5" font-style="italic" fill="#8a6f6b">a literal, never a comparison</text>
+<g transform="translate(878,529)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="534" font-size="13.5" fill="#16191d">verified = the result of comparing</text>
+<text x="894" y="554" font-size="12.5" font-style="italic" fill="#6b8a76">every approved asset, field by field</text>
+<line x1="48" y1="578" x2="1272" y2="578" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="608" font-size="14" font-weight="bold" fill="#16191d">Check again, after 2 objects vanish</text>
+<g transform="translate(410,603)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="608" font-size="13.5" fill="#16191d">all_present: true  ·  checked: 4</text>
+<text x="426" y="628" font-size="12.5" font-style="italic" fill="#8a6f6b">it re-read the receipt, not HubSpot</text>
+<g transform="translate(878,603)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="608" font-size="13.5" fill="#16191d">missing: 2  ·  verified: false</text>
+<text x="894" y="628" font-size="12.5" font-style="italic" fill="#6b8a76">it re-reads the destination</text>
+<line x1="48" y1="652" x2="1272" y2="652" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="682" font-size="14" font-weight="bold" fill="#16191d">One permanently failing run</text>
+<g transform="translate(410,677)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="682" font-size="13.5" fill="#16191d">recover() raises  ·  2 behind it stranded</text>
+<text x="426" y="702" font-size="12.5" font-style="italic" fill="#8a6f6b">the first exception aborts the pass</text>
+<g transform="translate(878,677)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="682" font-size="13.5" fill="#16191d">parked as failed, with the reason</text>
+<text x="894" y="702" font-size="12.5" font-style="italic" fill="#6b8a76">everything behind it still deploys</text>
+<line x1="48" y1="726" x2="1272" y2="726" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="756" font-size="14" font-weight="bold" fill="#16191d">Eight worker processes at once</text>
+<g transform="translate(410,751)" stroke="#b4443a" stroke-width="2.1" stroke-linecap="round"><path d="M -4.5,-4.5 L 4.5,4.5"/><path d="M 4.5,-4.5 L -4.5,4.5"/></g>
+<text x="426" y="756" font-size="13.5" fill="#16191d">279 of 320 writes lost</text>
+<text x="426" y="776" font-size="12.5" font-style="italic" fill="#8a6f6b">state file left unparseable</text>
+<g transform="translate(878,751)" stroke="#2f7a4f" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M -5,0.2 L -1.6,3.8 L 5.2,-4.2"/></g>
+<text x="894" y="756" font-size="13.5" fill="#16191d">0 lost  ·  53 of 53 held</text>
+<text x="894" y="776" font-size="12.5" font-style="italic" fill="#6b8a76">make stress asserts it, every run</text>
+<line x1="48" y1="800" x2="1272" y2="800" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="852" font-size="12" fill="#9aa0a8">02-durable-run-relay  ·  the promise and its checks are in ROADMAP.md §3</text>
+</svg>

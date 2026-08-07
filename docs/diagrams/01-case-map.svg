@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="840" fill="#ffffff"/>
+
+  <text x="48" y="56" font-size="27" font-weight="bold" fill="#16191d">Eleven cases, four groups</text>
+  <text x="48" y="82" font-size="14.5" fill="#6b7280">The event log labels them c1 to c11 and nothing else. Grouping them is the task. Six are faults; three are not; one is unrelated.</text>
+  <line x1="48" y1="100" x2="1152" y2="100" stroke="#d8dbe0" stroke-width="1.5"/>
+
+  <!-- BAND 1: FAULTS -->
+  <rect x="48" y="120" width="8" height="332" fill="#b4443a"/>
+  <text x="72" y="140" font-size="13" font-weight="bold" fill="#b4443a" letter-spacing="1.6">SIX FAULTS</text>
+
+  <g font-size="13">
+    <!-- F1 -->
+    <rect x="72" y="152" width="352" height="138" fill="#fdf5f4" stroke="#e5c4c0" stroke-width="1.2" rx="4"/>
+    <text x="88" y="176" font-size="15" font-weight="bold" fill="#16191d">F1 · No stable deployment identity</text>
+    <text x="88" y="199" font-size="12.5" font-weight="bold" fill="#b4443a">c2 · c4 · c5</text>
+    <text x="88" y="221" fill="#3d4249">submit() mints a fresh UUID and ignores the</text>
+    <text x="88" y="239" fill="#3d4249">idempotency key. retry() mints another. The</text>
+    <text x="88" y="257" fill="#3d4249">destination key is derived from the run id.</text>
+    <text x="88" y="279" font-size="12.5" font-style="italic" fill="#6b7280">"sometimes there are more drafts than we approved"</text>
+
+    <!-- F2 -->
+    <rect x="440" y="152" width="352" height="138" fill="#fdf5f4" stroke="#e5c4c0" stroke-width="1.2" rx="4"/>
+    <text x="456" y="176" font-size="15" font-weight="bold" fill="#16191d">F2 · Cancellation is advisory</text>
+    <text x="456" y="199" font-size="12.5" font-weight="bold" fill="#b4443a">c6</text>
+    <text x="456" y="221" fill="#3d4249">cancel() writes a status nobody reads. The</text>
+    <text x="456" y="239" fill="#3d4249">write loop never checks it and completion</text>
+    <text x="456" y="257" fill="#3d4249">sets 'done' unconditionally over the top.</text>
+    <text x="456" y="279" font-size="12.5" font-style="italic" fill="#6b7280">"a campaign someone cancelled kept going"</text>
+
+    <!-- F3 -->
+    <rect x="808" y="152" width="344" height="138" fill="#fdf5f4" stroke="#e5c4c0" stroke-width="1.2" rx="4"/>
+    <text x="824" y="176" font-size="15" font-weight="bold" fill="#16191d">F3 · The receipt is a self-report</text>
+    <text x="824" y="199" font-size="12.5" font-weight="bold" fill="#b4443a">c7</text>
+    <text x="824" y="221" fill="#3d4249">verified: True is a literal. The read-back is</text>
+    <text x="824" y="239" fill="#3d4249">stored and never compared. audit() re-reads</text>
+    <text x="824" y="257" fill="#3d4249">the receipt, so it can only agree with itself.</text>
+    <text x="824" y="279" font-size="12.5" font-style="italic" fill="#6b7280">"the receipt still said verified"</text>
+
+    <!-- F4 -->
+    <rect x="72" y="302" width="352" height="138" fill="#fdf5f4" stroke="#e5c4c0" stroke-width="1.2" rx="4"/>
+    <text x="88" y="326" font-size="15" font-weight="bold" fill="#16191d">F4 · No claim on a run</text>
+    <text x="88" y="349" font-size="12.5" font-weight="bold" fill="#b4443a">c8</text>
+    <text x="88" y="371" fill="#3d4249">run_once sets status='running' with no</text>
+    <text x="88" y="389" fill="#3d4249">compare-and-swap, so two workers can hold</text>
+    <text x="88" y="407" fill="#3d4249">the same deployment at the same moment.</text>
+    <text x="88" y="429" font-size="12.5" font-style="italic" fill="#6b7280">w-a and w-b both claimed run-14</text>
+
+    <!-- F5 -->
+    <rect x="440" y="302" width="352" height="138" fill="#fdf5f4" stroke="#e5c4c0" stroke-width="1.2" rx="4"/>
+    <text x="456" y="326" font-size="15" font-weight="bold" fill="#16191d">F5 · Concurrent writers lose objects</text>
+    <text x="456" y="349" font-size="12.5" font-weight="bold" fill="#b4443a">c8  ·  not visible in the source</text>
+    <text x="456" y="371" fill="#3d4249">The destination rewrites its whole state with</text>
+    <text x="456" y="389" fill="#3d4249">a read-modify-write. Eight processes lose</text>
+    <text x="456" y="407" fill="#3d4249">279 writes of 320 and corrupt the file.</text>
+    <text x="456" y="429" font-size="12.5" font-style="italic" fill="#6b7280">"once there were fewer, and it still said verified"</text>
+
+    <!-- F6 -->
+    <rect x="808" y="302" width="344" height="138" fill="#fdf5f4" stroke="#e5c4c0" stroke-width="1.2" rx="4"/>
+    <text x="824" y="326" font-size="15" font-weight="bold" fill="#16191d">F6 · Recovery has no isolation</text>
+    <text x="824" y="349" font-size="12.5" font-weight="bold" fill="#b4443a">c9</text>
+    <text x="824" y="371" fill="#3d4249">One loop, no try, no attempt counter, no</text>
+    <text x="824" y="389" fill="#3d4249">terminal failure. The first exception aborts</text>
+    <text x="824" y="407" fill="#3d4249">the pass and strands everything behind it.</text>
+    <text x="824" y="429" font-size="12.5" font-style="italic" fill="#6b7280">"two campaigns behind it never went out at all"</text>
+  </g>
+
+  <!-- BAND 2: NOT FAULTS -->
+  <rect x="48" y="480" width="8" height="170" fill="#2f7a4f"/>
+  <text x="72" y="500" font-size="13" font-weight="bold" fill="#2f7a4f" letter-spacing="1.6">THREE THAT ARE NOT FAULTS</text>
+
+  <g font-size="13">
+    <rect x="72" y="512" width="352" height="126" fill="#f4faf6" stroke="#bfdcc9" stroke-width="1.2" rx="4"/>
+    <text x="88" y="536" font-size="15" font-weight="bold" fill="#16191d">c1 · The baseline</text>
+    <text x="88" y="560" fill="#3d4249">Crash after a write, restart, recover. Already</text>
+    <text x="88" y="578" fill="#3d4249">safe, because the run id survives the restart.</text>
+    <text x="88" y="596" fill="#3d4249">It is the only path make demo exercises,</text>
+    <text x="88" y="614" fill="#3d4249">which is why the starter looks fine.</text>
+
+    <rect x="440" y="512" width="352" height="126" fill="#f4faf6" stroke="#bfdcc9" stroke-width="1.2" rx="4"/>
+    <text x="456" y="536" font-size="15" font-weight="bold" fill="#16191d">c3 · The control</text>
+    <text x="456" y="560" fill="#3d4249">Two different idempotency keys, identical</text>
+    <text x="456" y="578" fill="#3d4249">payloads. Eight drafts is the right answer.</text>
+    <text x="456" y="596" fill="#3d4249">Any rule that dedupes on payload content</text>
+    <text x="456" y="614" fill="#3d4249">collapses these and drops a campaign.</text>
+
+    <rect x="808" y="512" width="344" height="126" fill="#f4faf6" stroke="#bfdcc9" stroke-width="1.2" rx="4"/>
+    <text x="824" y="536" font-size="15" font-weight="bold" fill="#16191d">c10 · Corroborating</text>
+    <text x="824" y="560" fill="#3d4249">A write timed out and had in fact landed.</text>
+    <text x="824" y="578" fill="#3d4249">Evidence that destination outcomes are</text>
+    <text x="824" y="596" fill="#3d4249">ambiguous, which is why F1 is dangerous:</text>
+    <text x="824" y="614" fill="#3d4249">retrying under a new key duplicates.</text>
+  </g>
+
+  <!-- BAND 3: OUT OF SCOPE -->
+  <rect x="48" y="678" width="8" height="112" fill="#8b8f96"/>
+  <text x="72" y="698" font-size="13" font-weight="bold" fill="#6b7280" letter-spacing="1.6">ONE UNRELATED</text>
+
+  <rect x="72" y="710" width="1080" height="76" fill="#f7f8fa" stroke="#dcdfe4" stroke-width="1.2" rx="4"/>
+  <text x="88" y="734" font-size="15" font-weight="bold" fill="#16191d">c11 · thumbnail_render / transient_timeout</text>
+  <text x="88" y="757" font-size="13" fill="#3d4249">A different subsystem. No run in the deployment log, nothing in the operator's report, no deployment touched. Left alone on purpose:</text>
+  <text x="88" y="775" font-size="13" fill="#3d4249">the brief says not to repair behaviour that cannot be tied to the operator's report.</text>
+
+  <text x="48" y="820" font-size="12" fill="#9aa0a8">02-durable-run-relay  ·  grouping argued in ROADMAP.md §2</text>
+</svg>

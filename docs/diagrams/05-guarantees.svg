@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="868" viewBox="0 0 1460 868" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1460" height="868" fill="#ffffff"/>
+<text x="48" y="56" font-size="27" font-weight="bold" fill="#16191d">Eight promises, and the check that fails first</text>
+<text x="48" y="82" font-size="14.5" fill="#6b7280">A narrow promise you can prove beats a broad one you cannot. Each guarantee has one test class named after it — breaking the guarantee turns that class red and nothing else.</text>
+<line x1="48" y1="100" x2="1412" y2="100" stroke="#d8dbe0" stroke-width="1.5"/>
+<text x="48" y="140" font-size="12.5" font-weight="bold" fill="#6b7280" letter-spacing="1.5">THE PROMISE</text>
+<text x="540" y="140" font-size="12.5" font-weight="bold" fill="#6b7280" letter-spacing="1.5">WHERE IT LIVES</text>
+<text x="960" y="140" font-size="12.5" font-weight="bold" fill="#6b7280" letter-spacing="1.5">CHECK THAT FAILS FIRST</text>
+<text x="1352" y="140" font-size="12.5" font-weight="bold" fill="#6b7280" letter-spacing="1.5">FIX</text>
+<line x1="48" y1="154" x2="1412" y2="154" stroke="#c9ccd2" stroke-width="1.2"/>
+<text x="48" y="176" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" font-weight="bold" fill="#2d5f8a">G1</text>
+<text x="84" y="176" font-size="14" font-weight="bold" fill="#16191d">One idempotency key, one deployment.</text>
+<text x="84" y="195" font-size="12.5" fill="#6b7280">Same payload returns the existing run; a different one is refused.</text>
+<text x="540" y="176" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#16191d">UNIQUE(idempotency_key)</text>
+<text x="540" y="195" font-size="12.5" fill="#6b7280">submit() returns or conflicts</text>
+<text x="960" y="176" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#2d5f8a">OneRequestOneDeployment</text>
+<rect x="1352" y="163" width="80" height="20" fill="#eef7f1" rx="10"/>
+<text x="1392" y="177" font-size="11" text-anchor="middle" fill="#1d6b41">cause</text>
+<line x1="48" y1="214" x2="1412" y2="214" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="238" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" font-weight="bold" fill="#2d5f8a">G2</text>
+<text x="84" y="238" font-size="14" font-weight="bold" fill="#16191d">One draft per approved asset, forever.</text>
+<text x="84" y="257" font-size="12.5" fill="#6b7280">Stable across crash, restart, recovery and the admin retry button.</text>
+<text x="540" y="238" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#16191d">external_key(key, asset_id)</text>
+<text x="540" y="257" font-size="12.5" fill="#6b7280">derived from the operator's key</text>
+<text x="960" y="238" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#2d5f8a">OneDraftPerApprovedAsset</text>
+<rect x="1352" y="225" width="80" height="20" fill="#eef7f1" rx="10"/>
+<text x="1392" y="239" font-size="11" text-anchor="middle" fill="#1d6b41">cause</text>
+<line x1="48" y1="276" x2="1412" y2="276" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="300" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" font-weight="bold" fill="#2d5f8a">G3</text>
+<text x="84" y="300" font-size="14" font-weight="bold" fill="#16191d">One worker at a time on a deployment.</text>
+<text x="84" y="319" font-size="12.5" fill="#6b7280">A lease that expires; only an expired one can be taken.</text>
+<text x="540" y="300" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#16191d">_claim() conditional UPDATE</text>
+<text x="540" y="319" font-size="12.5" fill="#6b7280">the database picks the winner</text>
+<text x="960" y="300" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#2d5f8a">OneWorkerAtATime</text>
+<rect x="1352" y="287" width="80" height="20" fill="#eef7f1" rx="10"/>
+<text x="1392" y="301" font-size="11" text-anchor="middle" fill="#1d6b41">cause</text>
+<line x1="48" y1="338" x2="1412" y2="338" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="362" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" font-weight="bold" fill="#2d5f8a">G4</text>
+<text x="84" y="362" font-size="14" font-weight="bold" fill="#16191d">Cancellation is immediate and final.</text>
+<text x="84" y="381" font-size="12.5" fill="#6b7280">Drafts already written are reported, not hidden.</text>
+<text x="540" y="362" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#16191d">cancel() + per-write recheck</text>
+<text x="540" y="381" font-size="12.5" fill="#6b7280">completion refuses to override</text>
+<text x="960" y="362" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#2d5f8a">CancellationSticks</text>
+<rect x="1352" y="349" width="80" height="20" fill="#eef7f1" rx="10"/>
+<text x="1392" y="363" font-size="11" text-anchor="middle" fill="#1d6b41">cause</text>
+<line x1="48" y1="400" x2="1412" y2="400" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="424" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" font-weight="bold" fill="#2d5f8a">G5</text>
+<text x="84" y="424" font-size="14" font-weight="bold" fill="#16191d">'Succeeded' is earned, never asserted.</text>
+<text x="84" y="443" font-size="12.5" fill="#6b7280">Every approved asset read back and compared field by field.</text>
+<text x="540" y="424" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#16191d">_inspect()</text>
+<text x="540" y="443" font-size="12.5" fill="#6b7280">verified is its return value</text>
+<text x="960" y="424" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#2d5f8a">SuccessIsEarned</text>
+<rect x="1352" y="411" width="80" height="20" fill="#eef7f1" rx="10"/>
+<text x="1392" y="425" font-size="11" text-anchor="middle" fill="#1d6b41">cause</text>
+<line x1="48" y1="462" x2="1412" y2="462" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="486" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" font-weight="bold" fill="#2d5f8a">G6</text>
+<text x="84" y="486" font-size="14" font-weight="bold" fill="#16191d">'Check again' re-reads the destination.</text>
+<text x="84" y="505" font-size="12.5" fill="#6b7280">Not the receipt. That is the whole point of the button.</text>
+<text x="540" y="486" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#16191d">audit()</text>
+<text x="540" y="505" font-size="12.5" fill="#6b7280">ignores the stored objects</text>
+<text x="960" y="486" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#2d5f8a">AuditReadsTheDestination</text>
+<rect x="1352" y="473" width="80" height="20" fill="#eef7f1" rx="10"/>
+<text x="1392" y="487" font-size="11" text-anchor="middle" fill="#1d6b41">cause</text>
+<line x1="48" y1="524" x2="1412" y2="524" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="548" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" font-weight="bold" fill="#2d5f8a">G7</text>
+<text x="84" y="548" font-size="14" font-weight="bold" fill="#16191d">One bad run cannot block the others.</text>
+<text x="84" y="567" font-size="12.5" fill="#6b7280">Parked with its reason after three attempts.</text>
+<text x="540" y="548" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#16191d">recover() per-run isolation</text>
+<text x="540" y="567" font-size="12.5" fill="#6b7280">attempt cap, terminal failed</text>
+<text x="960" y="548" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#2d5f8a">OneBadRunCannotBlockTheQueue</text>
+<rect x="1352" y="535" width="80" height="20" fill="#eef7f1" rx="10"/>
+<text x="1392" y="549" font-size="11" text-anchor="middle" fill="#1d6b41">cause</text>
+<line x1="48" y1="586" x2="1412" y2="586" stroke="#eceef1" stroke-width="1"/>
+<text x="48" y="610" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" font-weight="bold" fill="#2d5f8a">G8</text>
+<text x="84" y="610" font-size="14" font-weight="bold" fill="#16191d">Our workers do not lose each other's writes.</text>
+<text x="84" y="629" font-size="12.5" fill="#6b7280">flock on POSIX, msvcrt on Windows, held around the client.</text>
+<text x="540" y="610" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#16191d">SerializedProvider</text>
+<text x="540" y="629" font-size="12.5" fill="#6b7280">the destination is unchanged</text>
+<text x="960" y="610" font-size="12.5" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#2d5f8a">ConcurrentWriters... + make stress</text>
+<rect x="1352" y="597" width="80" height="20" fill="#fdf6ec" rx="10"/>
+<text x="1392" y="611" font-size="11" text-anchor="middle" fill="#96661a">symptom</text>
+<line x1="48" y1="648" x2="1412" y2="648" stroke="#eceef1" stroke-width="1"/>
+<rect x="48" y="666" width="1364" height="152" fill="#f7f8fa" stroke="#dcdfe4" stroke-width="1.2" rx="5"/>
+<text x="72" y="694" font-size="13" font-weight="bold" fill="#16191d" letter-spacing="1.4">WHAT IT STILL DOES NOT PROMISE</text>
+<circle cx="78" cy="716" r="2.4" fill="#9aa0a8"/>
+<text x="94" y="720" font-size="12.5" fill="#3d4249">We cannot stop the destination changing or deleting objects after we write them. We detect it at the next audit; we do not repair it.</text>
+<circle cx="78" cy="737" r="2.4" fill="#9aa0a8"/>
+<text x="94" y="741" font-size="12.5" fill="#3d4249">We cannot make the destination store a value it refuses to store. We report the difference rather than quietly accepting it.</text>
+<circle cx="78" cy="758" r="2.4" fill="#9aa0a8"/>
+<text x="94" y="762" font-size="12.5" fill="#3d4249">G8 only covers writers that go through this relay. Anything else writing to the same destination can still lose our objects.</text>
+<circle cx="78" cy="779" r="2.4" fill="#9aa0a8"/>
+<text x="94" y="783" font-size="12.5" fill="#3d4249">'succeeded' means the destination held what was approved at the moment we asked. It is not a claim about five minutes later.</text>
+<circle cx="78" cy="800" r="2.4" fill="#9aa0a8"/>
+<text x="94" y="804" font-size="12.5" fill="#3d4249">A 'failed' run is parked, not fixed. Lease expiry is wall-clock, so badly skewed worker clocks could still allow a double claim.</text>
+<text x="48" y="854" font-size="12" fill="#9aa0a8">02-durable-run-relay  ·  argued in ROADMAP.md §3  ·  cause vs symptom in DECISIONS.md</text>
+</svg>

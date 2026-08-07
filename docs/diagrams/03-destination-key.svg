@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="690" viewBox="0 0 1320 690" font-family="DejaVu Sans, Helvetica, Arial, sans-serif">
+<rect width="1320" height="690" fill="#ffffff"/>
+<text x="48" y="56" font-size="27" font-weight="bold" fill="#16191d">Where the duplicate drafts came from</text>
+<text x="48" y="82" font-size="14.5" fill="#6b7280">The destination stores one object per key it is given. The starter gave it a key derived from the run id, and the run id is minted fresh every time.</text>
+<line x1="48" y1="100" x2="1272" y2="100" stroke="#d8dbe0" stroke-width="1.5"/>
+<text x="48" y="130" font-size="13" font-weight="bold" fill="#b4443a" letter-spacing="1.6">STARTER · the key follows the run</text>
+<rect x="48" y="142" width="1224" height="204" fill="#fdf7f6" stroke="#e5c4c0" stroke-width="1.2" rx="5"/>
+<rect x="76" y="168" width="210" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="181.0" y="190.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">submit("deploy-404")</text><text x="181.0" y="210.0" font-size="11.5" text-anchor="middle" fill="#6b7280">the operator's key</text>
+<line x1="286" y1="194" x2="323" y2="194" stroke="#8b8f96" stroke-width="1.6"/><path d="M 330,194 L 322,189.5 L 322,198.5 Z" fill="#8b8f96"/>
+<rect x="330" y="168" width="180" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="420.0" y="190.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">run-9</text><text x="420.0" y="210.0" font-size="11.5" text-anchor="middle" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#6b7280">a fresh UUID</text>
+<line x1="510" y1="194" x2="547" y2="194" stroke="#8b8f96" stroke-width="1.6"/><path d="M 554,194 L 546,189.5 L 546,198.5 Z" fill="#8b8f96"/>
+<rect x="554" y="168" width="350" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="729.0" y="190.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">run-9:asset-lp-001</text><text x="729.0" y="210.0" font-size="11.5" text-anchor="middle" fill="#6b7280">the key the destination is given</text>
+<line x1="904" y1="194" x2="941" y2="194" stroke="#8b8f96" stroke-width="1.6"/><path d="M 948,194 L 940,189.5 L 940,198.5 Z" fill="#8b8f96"/>
+<rect x="948" y="168" width="296" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="1096.0" y="190.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">4 drafts</text><text x="1096.0" y="210.0" font-size="11.5" text-anchor="middle" fill="#6b7280">in HubSpot</text>
+<rect x="76" y="250" width="210" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="181.0" y="272.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">retry()</text><text x="181.0" y="292.0" font-size="11.5" text-anchor="middle" fill="#6b7280">the run stalled</text>
+<line x1="286" y1="276" x2="323" y2="276" stroke="#b4443a" stroke-width="1.6"/><path d="M 330,276 L 322,271.5 L 322,280.5 Z" fill="#b4443a"/>
+<rect x="330" y="250" width="180" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="420.0" y="272.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">run-10</text><text x="420.0" y="292.0" font-size="11.5" text-anchor="middle" font-family="DejaVu Sans Mono, Menlo, monospace" fill="#6b7280">another fresh UUID</text>
+<line x1="510" y1="276" x2="547" y2="276" stroke="#b4443a" stroke-width="1.6"/><path d="M 554,276 L 546,271.5 L 546,280.5 Z" fill="#b4443a"/>
+<rect x="554" y="250" width="350" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="729.0" y="272.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">run-10:asset-lp-001</text><text x="729.0" y="292.0" font-size="11.5" text-anchor="middle" fill="#6b7280">a different key, the same asset</text>
+<line x1="904" y1="276" x2="941" y2="276" stroke="#b4443a" stroke-width="1.6"/><path d="M 948,276 L 940,271.5 L 940,280.5 Z" fill="#b4443a"/>
+<rect x="948" y="250" width="296" height="52" fill="#fbeceb" stroke="#dda9a3" stroke-width="1.3" rx="4"/><text x="1096.0" y="272.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">8 drafts</text><text x="1096.0" y="292.0" font-size="11.5" text-anchor="middle" fill="#6b7280">for 4 approved assets</text>
+<text x="729.0" y="232" font-size="12" text-anchor="middle" font-style="italic" fill="#b4443a">same approved asset, two names → the destination stores it twice</text>
+<text x="48" y="392" font-size="13" font-weight="bold" fill="#2f7a4f" letter-spacing="1.6">AFTER · the key follows the operator's intent</text>
+<rect x="48" y="404" width="1224" height="216" fill="#f6faf7" stroke="#bfdcc9" stroke-width="1.2" rx="5"/>
+<rect x="76" y="430" width="210" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="181.0" y="452.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">submit("deploy-404")</text><text x="181.0" y="472.0" font-size="11.5" text-anchor="middle" fill="#6b7280">the operator's key</text>
+<line x1="286" y1="456" x2="323" y2="456" stroke="#2f7a4f" stroke-width="1.6"/><path d="M 330,456 L 322,451.5 L 322,460.5 Z" fill="#2f7a4f"/>
+<rect x="330" y="430" width="180" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="420.0" y="452.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">one deployment</text><text x="420.0" y="472.0" font-size="11.5" text-anchor="middle" fill="#6b7280">UNIQUE on the key</text>
+<line x1="510" y1="456" x2="547" y2="456" stroke="#2f7a4f" stroke-width="1.6"/><path d="M 554,456 L 546,451.5 L 546,460.5 Z" fill="#2f7a4f"/>
+<rect x="554" y="430" width="350" height="52" fill="#ffffff" stroke="#c9ccd2" stroke-width="1.3" rx="4"/><text x="729.0" y="452.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">deploy:&lt;sha256(key)&gt;:asset-lp-001</text><text x="729.0" y="472.0" font-size="11.5" text-anchor="middle" fill="#6b7280">derived from the key, not the run</text>
+<line x1="904" y1="456" x2="941" y2="456" stroke="#2f7a4f" stroke-width="1.6"/><path d="M 948,456 L 940,451.5 L 940,460.5 Z" fill="#2f7a4f"/>
+<rect x="948" y="430" width="296" height="52" fill="#eef7f1" stroke="#a9ccb7" stroke-width="1.3" rx="4"/><text x="1096.0" y="452.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">4 drafts</text><text x="1096.0" y="472.0" font-size="11.5" text-anchor="middle" fill="#6b7280">in HubSpot</text>
+<rect x="76" y="512" width="828" height="86" fill="#ffffff" stroke="#d3dcd6" stroke-width="1.2" rx="4"/>
+<text x="96" y="536" font-size="13" font-weight="bold" fill="#16191d">crash  ·  restart  ·  admin retry  ·  recovery sweep  ·  a second worker  ·  an ambiguous write that timed out</text>
+<text x="96" y="558" font-size="13" fill="#3d4249">Every one of these recomputes the same key from the same operator intent, and the destination is idempotent on that key.</text>
+<text x="96" y="578" font-size="13" fill="#3d4249">So a retry cannot duplicate, which is also what makes retrying after an ambiguous provider error safe (c10).</text>
+<line x1="904" y1="555" x2="941" y2="555" stroke="#2f7a4f" stroke-width="1.6"/><path d="M 948,555 L 940,550.5 L 940,559.5 Z" fill="#2f7a4f"/>
+<rect x="948" y="512" width="296" height="86" fill="#eef7f1" stroke="#a9ccb7" stroke-width="1.3" rx="4"/><text x="1096.0" y="551.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#16191d">still 4 drafts</text><text x="1096.0" y="571.0" font-size="11.5" text-anchor="middle" fill="#6b7280">no matter how many times</text>
+<text x="48" y="666" font-size="12" fill="#9aa0a8">02-durable-run-relay  ·  Relay.external_key() in relay/core.py  ·  checked by OneDraftPerApprovedAsset</text>
+</svg>
