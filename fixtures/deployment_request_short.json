@@ -1,0 +1,30 @@
+{
+  "destination": "hubspot-marketing",
+  "mode": "draft",
+  "assets": [
+    {
+      "asset_id": "asset-lp-001",
+      "type": "landing_page",
+      "display_name": "Q3 landing page",
+      "source_sha256": "3c75dbe870788ce56574fbf4b66e0646b053b8dde6befc7fbe7b7fd8ff015b71"
+    },
+    {
+      "asset_id": "asset-email-001",
+      "type": "email",
+      "display_name": "Q3 email - product",
+      "source_sha256": "8a19d18fc82d447579f3bc2f8e3af2e38fd5930a0d70ecda24e0c2c39f081ca8"
+    },
+    {
+      "asset_id": "asset-email-002",
+      "type": "email",
+      "display_name": "Q3 email - pricing",
+      "source_sha256": "384c042f088907da48c34ea8726c97b944eb9e0a33c2a8272af18cce1cd95793"
+    },
+    {
+      "asset_id": "asset-email-003",
+      "type": "email",
+      "display_name": "Q3 nurture email",
+      "source_sha256": "facc744a28fa499897819c280688855618446cb569c7bca603e77e81f044096d"
+    }
+  ]
+}

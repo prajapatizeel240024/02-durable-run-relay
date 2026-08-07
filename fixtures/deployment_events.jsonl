@@ -1,0 +1,36 @@
+{"case":"c1","event":"submit","idempotency_key":"deploy-101","payload_version":"A","run_id":"run-1"}
+{"case":"c1","event":"provider_write","run_id":"run-1","asset_id":"asset-lp-001","accepted":true}
+{"case":"c1","event":"process_crash","run_id":"run-1","local_receipt":null}
+{"case":"c1","event":"recover","run_id":"run-1","status":"done","provider_object_count":4}
+{"case":"c2","event":"submit","idempotency_key":"deploy-202","payload_version":"A","run_id":"run-2"}
+{"case":"c2","event":"submit","idempotency_key":"deploy-202","payload_version":"A","run_id":"run-3"}
+{"case":"c2","event":"operator_observation","provider_object_count":8}
+{"case":"c3","event":"submit","idempotency_key":"deploy-207a","payload_version":"A","run_id":"run-7"}
+{"case":"c3","event":"submit","idempotency_key":"deploy-207b","payload_version":"A","run_id":"run-8"}
+{"case":"c3","event":"operator_observation","provider_object_count":8}
+{"case":"c4","event":"submit","idempotency_key":"deploy-404","payload_version":"A","run_id":"run-9"}
+{"case":"c4","event":"worker_stall","run_id":"run-9","local_status":"running"}
+{"case":"c4","event":"operator_action","action":"retry_from_admin_panel","idempotency_key":"deploy-404","run_id":"run-10"}
+{"case":"c4","event":"operator_observation","provider_object_count":8}
+{"case":"c5","event":"submit","idempotency_key":"deploy-303","payload_version":"A","run_id":"run-4"}
+{"case":"c5","event":"submit","idempotency_key":"deploy-303","payload_version":"B","run_id":"run-5"}
+{"case":"c6","event":"provider_write","run_id":"run-6","asset_id":"asset-lp-001","accepted":true}
+{"case":"c6","event":"cancel","run_id":"run-6","local_status":"cancelled"}
+{"case":"c6","event":"operator_observation","final_local_status":"done","provider_object_count":4}
+{"case":"c7","event":"provider_write","run_id":"run-11","asset_id":"asset-lp-001","accepted":true}
+{"case":"c7","event":"receipt","run_id":"run-11","verified":true,"objects":4}
+{"case":"c7","event":"operator_observation","note":"receipt said verified; the drafts were not what we approved"}
+{"case":"c8","event":"worker_claim","run_id":"run-14","worker_id":"w-a"}
+{"case":"c8","event":"worker_claim","run_id":"run-14","worker_id":"w-b"}
+{"case":"c8","event":"provider_write","run_id":"run-14","worker_id":"w-a","asset_id":"asset-email-002","accepted":true}
+{"case":"c8","event":"provider_write","run_id":"run-14","worker_id":"w-b","asset_id":"asset-email-003","accepted":true}
+{"case":"c8","event":"receipt","run_id":"run-14","verified":true,"objects":4}
+{"case":"c8","event":"operator_observation","provider_object_count":3}
+{"case":"c9","event":"submit","idempotency_key":"deploy-505","payload_version":"C","run_id":"run-15"}
+{"case":"c9","event":"recover","run_id":"run-15","outcome":"error"}
+{"case":"c9","event":"recover","run_id":"run-15","outcome":"error"}
+{"case":"c9","event":"recover","run_id":"run-15","outcome":"error"}
+{"case":"c9","event":"operator_observation","note":"run-16 and run-17 were submitted after run-15 and never deployed anything"}
+{"case":"c10","event":"provider_write","run_id":"run-12","asset_id":"asset-email-002","accepted":null,"error":"gateway_timeout","retryable":true}
+{"case":"c10","event":"provider_readback","run_id":"run-12","asset_id":"asset-email-002","found":true}
+{"case":"c11","event":"tool_error","run_id":"run-13","tool":"thumbnail_render","code":"transient_timeout","retryable":true}

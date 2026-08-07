@@ -1,0 +1,14 @@
+We do not trust this thing.
+
+The restart demo finishes clean, so I'm told it's fine, but what we see in
+HubSpot keeps disagreeing with what the service says it did. Sometimes there
+are more drafts than we approved. Once there were fewer, and the receipt still
+said verified. A campaign someone cancelled kept going. And a stuck run seems
+to take the whole queue down with it — two campaigns behind it never went out
+at all.
+
+I can't tell you which of those are the same problem and which aren't. That's
+sort of the issue: I have no way to know what this service actually promises,
+so I can't tell when it's broken.
+
+Tell us what it guarantees, and show us why we should believe it.
