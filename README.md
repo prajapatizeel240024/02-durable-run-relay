@@ -1,4 +1,4 @@
-# CharacterQuilt technical screen: deploy a campaign safely
+#
 
 The assignment is in [TASK.md](TASK.md). What I did with it is below.
 
